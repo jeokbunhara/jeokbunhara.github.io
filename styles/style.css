@@ -1,0 +1,219 @@
+@font-face {
+  font-family : 'nexongothic';
+  src : url("font/nexongothic.woff") format('woff');
+}
+@font-face {
+  font-family : 'OwnglyphParkDaHyun';
+  src : url("font/Ownglyph_ParkDaHyun.woff2") format('woff2');
+}
+@font-face {
+    font-family: 'NeoDonggeunmo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Escoredream';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+.t1 {font-family: 'nexongothic';}
+.t2 {font-family: 'OwnglyphParkDaHyun';}
+.t3 {font-family: 'NeoDonggeunmo';}
+.t4 {font-family: 'Escoredream';}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+header {
+  background:#07672f;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0 0 12px 12px; /* 아래쪽 모서리 둥글게 */
+}
+
+
+header h1 {
+  position: relative;
+  transition: color 0.1s;
+  display: inline-block; 
+}
+
+header a:hover {
+  color: #ffdd57; 
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a {
+  position: relative;
+  z-index: 1;  /* 오버레이 위로 표시 */
+  text-decoration: none;
+  margin: 0 8px;
+}
+nav.c1 a {
+  color: #ffffff; 
+  text-decoration: none;
+}
+nav.c1 a:hover {
+    color:#ffdd57;
+    text-decoration: none;
+}
+
+nav.c2 a {
+  color: #000; 
+  text-decoration: none;
+}
+
+.container > nav {
+  grid-column: 1 / -1; /* 한 줄 전부 차지 */
+  border: 3px solid #c7ddc9;
+  background-color: #fdfcf8de;
+  background-image: url("../img/lucidlablogo.png");
+  background-size: auto 100%;
+  background-position: center;
+  background-blend-mode: lighten;
+  background-repeat: no-repeat; 
+  padding: 10px;
+  border-radius: 12px; 
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#playBgm {
+  background: #fff;
+  color: #07672f;
+  opacity: 0.5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  position: fixed;  /* 화면에 고정 */
+  top: 10px;       
+  right: 10px;      
+  z-index: 9999;    /* 다른 요소보다 위에 표시 */
+}
+
+#playBgm.playing {
+  opacity: 0.9; /* 불투명 */
+}
+
+#playBgm:hover {
+  background: #ffdd57;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 16px;
+  padding: 10px;
+  max-width: 100%;  
+  box-sizing: border-box;
+}
+
+.newcontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 100px;
+  padding: 50px;
+  max-width: 100%;  
+  box-sizing: border-box;
+}
+
+section{
+  
+  border: 3px dashed #c7ddc9; 
+  padding: 10px;
+  border-radius: 0 0 12px 12px;
+  max-width: 100%;  
+  box-sizing: border-box;
+}
+
+.container > section img,
+.container > section table {
+  max-width: 100%;
+  height: auto;
+}
+
+.researchers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 16px;                     
+  justify-items: center; 
+  padding: 10px;
+  text-align: center;
+}
+
+.researcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #c7ddc9;
+  border-radius: 12px;
+  padding: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.researcher:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.researcher img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.researcher span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.researchers > .title {
+  grid-column: 1 / -1; /* 한 줄 전체 차지 */
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .container 
+  {
+    grid-template-columns: 1fr;
+  }
+  .newcontainer {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 16px;
+    padding: 10px;
+    max-width: 100%;  
+    box-sizing: border-box;
+}
+}
