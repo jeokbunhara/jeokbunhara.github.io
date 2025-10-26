@@ -12,7 +12,6 @@
     font-weight: normal;
     font-display: swap;
 }
-
 @font-face {
     font-family: 'Escoredream';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
@@ -76,6 +75,14 @@ nav.c2 a {
   text-decoration: none;
 }
 
+.link {
+  color: #07672f;
+  text-decoration: none;
+}
+.link:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
 .container > nav {
   grid-column: 1 / -1; /* 한 줄 전부 차지 */
   border: 3px solid #c7ddc9;
@@ -135,19 +142,31 @@ nav.c2 a {
 
 .newcontainer {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr;
   gap: 100px;
   padding: 50px;
   max-width: 100%;  
   box-sizing: border-box;
 }
+.newcontainer > nav {
+  grid-column: 1 / -1; /* 한 줄 전부 차지 */
+  padding: 5px;
+  border-radius: 12px; 
+  text-align: left;
+  overflow: hidden;
+}
 
-section{
+section {
   
   border: 3px dashed #c7ddc9; 
   padding: 10px;
   border-radius: 0 0 12px 12px;
   max-width: 100%;  
+  box-sizing: border-box;
+}
+
+.hidehh {
+  border: hidden;
   box-sizing: border-box;
 }
 
@@ -203,6 +222,34 @@ section{
   margin-bottom: 16px;
 }
 
+.ygyz {
+  width: 200px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+  border-radius: 10px;
+  cursor: zoom-in;
+}
+
+.ygyz:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+table, th, td {
+  border: 1px solid #07672f;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+th {
+  text-align: center;
+  vertical-align: top;
+  background-color: #c7ddc936;
+}
+
+
+
 @media (max-width: 768px) {
   .container 
   {
@@ -210,9 +257,9 @@ section{
   }
   .newcontainer {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 16px;
-    padding: 10px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 5px;
     max-width: 100%;  
     box-sizing: border-box;
 }
