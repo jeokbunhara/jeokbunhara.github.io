@@ -14,4 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.remove("playing");
     }
   });
+
 });
+
+var cnt = 1;
+function profileChange() {
+  var profile = document.getElementById("profile");
+  var profileprf = document.getElementById("profileprf");
+  if(cnt%2==1)
+    {
+      profile.src="../img/lucidprf.png";
+      profileprf.src="../img/lucid.png";
+    }
+  else
+    {
+      profile.src="../img/lucid.png";
+      profileprf.src="../img/lucidprf.png";
+   }
+  cnt++;
+}
