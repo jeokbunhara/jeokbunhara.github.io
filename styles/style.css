@@ -229,10 +229,13 @@ section {
   margin: 0 auto; 
   border-radius: 10px;
   cursor: zoom-in;
+  transition: perspective 0.3s;
+  transform: perspective(800px) rotateY(0deg);
+  transform-style: preserve-3d;
 }
 
-.ygyz:hover {
-  transform: scale(1.05);
+.ygyz:active{
+  transform: perspective(800px) rotateY(180deg);
   transition: transform 0.3s;
 }
 
